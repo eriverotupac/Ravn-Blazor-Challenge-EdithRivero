@@ -17,5 +17,12 @@ namespace ChallengeRavn.Helpers
             var indexChar = urlParsed.LastIndexOf("/");
             return urlParsed.Substring(indexChar + 1);
         }
+
+        public string GetPageIdFromURL(string url)
+        {
+            var urlParsed = url.Substring(0, url.Length);
+            var indexChar = urlParsed.LastIndexOf("/");
+            return urlParsed.Substring(indexChar + 1);
+        }
     }
 }

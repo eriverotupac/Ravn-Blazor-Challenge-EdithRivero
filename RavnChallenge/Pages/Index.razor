@@ -3,7 +3,7 @@
 @inject PeopleService PeopleService
 
 <div class="row">
-    <div class="panelPeopleList">
+    <div class="col-sm-4 panelPeopleList">
         @if (manyPeople == null)
         {
             <span style="position:absolute center">Loading... </span>
@@ -11,8 +11,7 @@
         else
         {
             <ul>
-                @foreach (var people in manyPeople)
-                {
+                <Virtualize Context="people" Items="@manyPeople" OverscanCount="10">
                     <li class="personCell">
                         <div class="row">
                             <div class="col-sm-10">
@@ -29,15 +28,14 @@
                             </div>
                         </div>
                     </li>
-
-                }
+                </Virtualize>
             </ul>
         }
     </div>
 
     @if (requestDetails)
     {
-        <div class="col-sm-12 panelPeopleInfo">
+        <div class="col-sm-8 panelPeopleInfo">
             <div class="parentCellHeader">
                 <span class="parentCellHeaderText">General Information</span>
             </div>
@@ -73,7 +71,7 @@
     { @string.Empty}
 </div>
 @code {
-    private IEnumerable<People> manyPeople;
+    private List<People> manyPeople;
     private bool requestDetails = false;
     private People requestedPeople = new People() { Eye = "Pepito", Hair = "Blue", Skin = "y", Birth = "ooo", Vehicles = new string[2] { "d", "y" } };
 

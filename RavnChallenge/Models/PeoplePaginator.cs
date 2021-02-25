@@ -7,8 +7,8 @@ namespace ChallengeRavn.Models
 {
     public class PeoplePaginator
     {
-        [System.Text.Json.Serialization.JsonPropertyName("count")]
-        public int Count { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("next")]
+        public string Next { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("results")]
         public People[] PeopleList { get; set; }
