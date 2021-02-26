@@ -10,7 +10,7 @@ This project was developed for training proposes with Blazor in the web platform
 Visual Studio Version 16.8.6 (if want to be the code in kindly way)
 ###### Running in local machine
 1. Clone the code
-2. Open Command Prompt (cmd) and type the following:  **dotnet run 'here goes the complete path of project code'
+2. Open Command Prompt (cmd) and type the following:  **dotnet run 'here goes the complete path of project code'**
 3. Open a browser and type localhost and the port that shows in the cmd.
 
 ## Assumptions
@@ -22,7 +22,7 @@ This desicion was made because the information is few, but maybe in other scenar
 3. The specie was considered *human* when gender was male or female. 
 
 ## Technologies used
-1. I have to donwload the httpclient balzor package for obtaining the answers in the json format.
+AspNetCore.Blazor.Httpclient package: For obtaining the response in the json format.
 
 ## Additional information
 2. I was about to install the awesome font, because the arrow in the OpenIconic is a bit width than the mockup, but later I decided to used the OpenIconic because I read in the css details: "Use platform default indicator". 
@@ -30,7 +30,7 @@ This desicion was made because the information is few, but maybe in other scenar
 
 ## Some difficulties:
 - To be honest, the frontend code is a bit challenge that backend. So, I was stucked in making the list of people.
-- The other thing that made me search a lot on the internet, was how to handle the pagination. I first tried *Virtualization*, but it did not work as was wantted. Then, I tried  *ItemsProviderResult* and I realized that it took so much time. So, I decided to add a button to get the data. I know it is not the functionaly expected, but I prefer to let it working that having a *"strange"* behaviour.
+- The other thing that made me search a lot on the internet, was how to handle the pagination. I first tried *Virtualization*, but it did not work as was wantted. Then, I tried  *ItemsProviderResult* and I realized that it took so much time. So, I decided to add a button to get the data. I know it is not the functionaly expected, but I prefer to let it working.
 
 ## Happinnes
 I really enjoyed doing this!
