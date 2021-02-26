@@ -35,8 +35,7 @@ AspNetCore.Blazor.Httpclient package: For obtaining the response in the json for
 - I was about to install the awesome font, because the arrow in the OpenIconic is a bit width than the mockup, but later I decided to used the OpenIconic because I read in the css details: "Use platform default indicator". 
 
 ## Some difficulties:
-- I did not finish to design the error page.
-- I used the spinner loading with css only, but I did not like much the all code for each spin that was necessary to put in the index page. So, I wanted to create a component to better organize it and found some difficulties.  
+- I did not finish to design the error page. 
 - To be honest, the frontend code is a bit challenge that backend. So, I was stucked in making the list of people.
 - The other thing that made me search a lot on the internet, was how to handle the pagination. I first tried *Virtualization*, but it did not work as was wantted. Then, I tried  *ItemsProviderResult* and I realized that it took so much time. So, I decided to add a button to get the data. I know this is not the functionaly expected, but I prefer to let it working.
 
