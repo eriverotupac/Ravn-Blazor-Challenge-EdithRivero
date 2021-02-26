@@ -11,6 +11,6 @@ namespace ChallengeRavn.Models
         public string Next { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("results")]
-        public People[] PeopleList { get; set; }
+        public List<People> PeopleList { get; set; }
     }
 }

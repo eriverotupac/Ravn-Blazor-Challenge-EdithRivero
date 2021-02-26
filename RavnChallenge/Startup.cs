@@ -35,8 +35,7 @@ namespace RavnChallenge
         {
             if (env.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error");
-                //app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {

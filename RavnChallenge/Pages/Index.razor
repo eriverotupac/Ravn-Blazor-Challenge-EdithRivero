@@ -6,12 +6,31 @@
     <div class="col-sm-4 panelPeopleList">
         @if (manyPeople == null)
         {
-            <span style="position:absolute center">Loading... </span>
+            <div class="col-sm-12">
+                <div class="loadingCell">
+                    <div class='spinner'>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                        <div class='spinner-blade'></div>
+                    </div>
+                    <span class="loadingCellText">Loading</span>
+                </div>
+            </div>
         }
         else
         {
             <ul>
-                <Virtualize Context="people" Items="@manyPeople" OverscanCount="10">
+                @foreach (People people in manyPeople)
+                {
                     <li class="personCell">
                         <div class="row">
                             <div class="col-sm-10">
@@ -28,9 +47,16 @@
                             </div>
                         </div>
                     </li>
-                </Virtualize>
+                }
+                @if (showLoading)
+                {
+                    <li class="personCell">
+                        <span class="loadingCellItems" @onclick="(() => AddMoreItems())"><img class="loadingImage" src="loading.gif" />Click for loading more items...</span>
+                    </li>
+                }
             </ul>
         }
+
     </div>
 
     @if (requestDetails)
@@ -55,35 +81,56 @@
                 <span class="infoCellTextLabel">Birth Year</span>
                 <span class="infoCellTextValue">@requestedPeople.Birth</span>
             </div>
-
-            <div class="parentCellHeader">
-                <span class="parentCellHeaderText">Vehicles</span>
-            </div>
-            @foreach (var vehicleName in requestedPeople.Vehicles)
+            @if (requestedPeople.Vehicles.Length > 0)
             {
-                <div class=" col-sm-12 infoCell">
-                    <span class="infoCellTextLabel">@vehicleName </span>
+                <div class="parentCellHeader">
+                    <span class="parentCellHeaderText">Vehicles</span>
                 </div>
+                @foreach (var vehicleName in requestedPeople.Vehicles)
+                {
+                    <div class=" col-sm-12 infoCell">
+                        <span class="infoCellTextLabel">@vehicleName </span>
+                    </div>
+                }
+            }
+            else
+            {
+                @string.Empty;
             }
         </div>
     }
-    else
-    { @string.Empty}
 </div>
 @code {
     private List<People> manyPeople;
     private bool requestDetails = false;
-    private People requestedPeople = new People() { Eye = "Pepito", Hair = "Blue", Skin = "y", Birth = "ooo", Vehicles = new string[2] { "d", "y" } };
+    private People requestedPeople = new People();
+    int pageCounter = 1;
+    private bool showLoading = true;
 
     protected override async Task OnInitializedAsync()
     {
-        manyPeople = await PeopleService.GetPeople();
+        manyPeople = await PeopleService.GetPeople(pageCounter);
+        pageCounter++;
     }
 
     private void ShowDetails(string name)
     {
-        requestDetails = !requestDetails;
-        var found = (People)manyPeople.FirstOrDefault(x => x.Name == name);
-        requestedPeople = found;
+        requestDetails = true;
+        requestedPeople = (People)manyPeople.FirstOrDefault(x => x.Name == name);
+    }
+
+    private async void AddMoreItems()
+    {
+        var newRequest = await PeopleService.GetPeople(pageCounter);
+        if (newRequest != null)
+        {
+            manyPeople.AddRange(newRequest);
+            pageCounter++;
+        }
+        else
+        {
+            showLoading = false;
+        }
+        StateHasChanged();
     }
 }

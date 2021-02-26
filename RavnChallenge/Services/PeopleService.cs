@@ -12,35 +12,19 @@ namespace ChallengeRavn.Services
     public class PeopleService
     {
         private HttpClient _HttpClient;
-        private ParseUrlHelper _ParseHelper;
         private GenderService _GenderService;
         private PlanetService _PlanetService;
         private VehicleService _VehicleService;
         public PeopleService(HttpClient httpClient)
         {
             _HttpClient = httpClient;
-            _ParseHelper = new ParseUrlHelper();
             _GenderService = new GenderService(_HttpClient);
             _PlanetService = new PlanetService(_HttpClient);
             _VehicleService = new VehicleService(_HttpClient);
         }
-        public async Task<List<People>> GetPeople()
+
+        public async Task<List<People>> GetPeopleDetails(List<People> peopleList)
         {
-            var peoplePaginator = await _HttpClient.GetJsonAsync<PeoplePaginator>("api/people/");
-            var peopleListDetails = new List<People>();
-            while (!string.IsNullOrEmpty(peoplePaginator.Next))
-            {
-                string pageId = _ParseHelper.GetPageIdFromURL(peoplePaginator.Next);
-                peoplePaginator = await _HttpClient.GetJsonAsync<PeoplePaginator>($"api/people/{pageId}");
-                peopleListDetails.AddRange(await this.GetPeopleDetails(peoplePaginator.PeopleList));
-            }
-
-            return peopleListDetails;
-        }
-
-        public async Task<IEnumerable<People>> GetPeopleDetails(IEnumerable<People> peopleList)
-        {
-
             try
             {
                 foreach (People people in peopleList)
@@ -60,6 +44,22 @@ namespace ChallengeRavn.Services
             {
                 return null;
             }
+        }
+
+        public async Task<List<People>> GetPeople(int pageId)
+        {
+            try
+            {
+                string tagPageId = "?page=";
+                var srtPageId = tagPageId + pageId;
+                var peoplePaginator = await _HttpClient.GetJsonAsync<PeoplePaginator>($"api/people/{srtPageId}");
+                return await this.GetPeopleDetails(peoplePaginator.PeopleList);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            
         }
     }
 }
