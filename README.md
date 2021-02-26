@@ -9,11 +9,11 @@ This project was developed for training proposes with Blazor in the web platform
 .Net Blazor SKD: 5.0
 Visual Studio Version 16.8.6 (if want to be the code in kindly way)
 ## Running in local machine
-###### If you don't have Gif follow these instructions
+###### If you have Gif installed skip the first two instructions
 1. Donwload and install from Git official site. https://git-scm.com/
 2. Open Command Prompt (cmd) and type git for checking the installation.
-3. In the cmd locate the folder where you want to donwload the code.
-4. Type on cmd git clone and the URL of this repository. The command should be like this: ``` bash git clone https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero.git```
+4. In the cmd locate the folder where you want to donwload the code.
+5. Type on cmd git clone and the URL of this repository. The command should be like this: ``` bash git clone https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero.git```
 You can get this URL by clicking in the green button **Code** and copy the URL in the clone option. 
 5. In the cmd browse your location folder where the code was donwloaded and navegate until the folder RavnChallenge.
 For example: C:\Users\Edith\Download\Ravn-Blazor-Challenge-EdithRivero\RavnChallenge
