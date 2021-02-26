@@ -25,23 +25,17 @@ app {
 .top-header {
     height: 52px;
     background: #121212;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+    padding-left:33px;
+    padding-top:16px;
+    padding-bottom:16px;
 }
 
-.panelPeopleList {
+.people-panel-list {
     border-right: 1px solid #E5E5E5;
-    width:350px;
+    width: 350px;
 }
 
-.panelPeopleInfo {
+.people-panel-info {
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -51,27 +45,27 @@ ul {
     list-style-type: none;
 }
 
-.personCell {
+.person-cell {
     padding: 10px;
     border-bottom: 1px solid #E5E5E5;
 }
 
-.textPersonBold {
+.person-text-bold {
     font-weight: bold;
 }
 
-.textPersonShadow {
+.person-text-low-emphasis {
     font-weight: normal;
     color: #828282;
 }
 
-.textPersonIcon {
+.person-text-icon {
     top: 25%;
     bottom: 25%;
     text-align: center;
 }
 
-.parentCellHeader {
+.parent-cell-header {
     height: 60px;
     width: 890px;
     padding-top: 32px;
@@ -80,45 +74,46 @@ ul {
     padding-right: 16px;
 }
 
-.parentCellHeaderText {
+.parent-cell-text-header {
     font-weight: bold;
 }
 
-.infoCell {
+.info-cell {
     font-weight: bold;
     padding: 16px;
     height: 49px;
     border-bottom: 1px solid #E5E5E5;
 }
 
-.infoCellTextLabel {
+.info-cell-text-label {
     font-weight: bold;
     float: left;
     color: #828282;
 }
 
-.infoCellTextValue {
+.info-cell-text-value {
     font-weight: bold;
     float: right;
 }
 
-.loadingCell {
+.loading-cell {
     text-align: center;
     display: block;
     padding:18px;
 }
 
-.loadingCellText {
+.loading-cell-text {
     vertical-align: super;
     font-weight: bold;
     color: #828282;
     padding-left:8px;
 }
 
-.loadingCellItems {
+.loading-cell-pointer {
     cursor:pointer;
 }
-.loadingImage {
+
+.image-fitted{
     width: 20px;
     height: 20px;
     margin-right: 8px;
