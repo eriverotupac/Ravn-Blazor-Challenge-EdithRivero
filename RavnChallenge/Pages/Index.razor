@@ -7,23 +7,7 @@
         @if (manyPeople == null)
         {
             <div class="col-sm-12">
-                <div class="loading-cell">
-                    <div class='spinner'>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                        <div class='spinner-blade'></div>
-                    </div>
-                    <span class="loading-cell-text">Loading</span>
-                </div>
+                <Loading TextLoading="Loading" />
             </div>
         }
         else
@@ -34,7 +18,7 @@
                     <li class="person-cell">
                         <div class="row">
                             <div class="col-sm-10">
-                                <span class=".person-text-bold">
+                                <span class="person-text-bold">
                                     @people.Name
                                     <br />
                                     <span class="person-text-low-emphasis">
@@ -51,7 +35,7 @@
                 @if (showLoading)
                 {
                     <li class="person-cell">
-                        <span class="loading-cell-pointer" @onclick="(() => AddMoreItems())"><img class="image-fitted" src="loading.gif" />Click for loading more items...</span>
+                        <span class="loading-cell-pointer" @onclick="(() => AddMoreItems())"><Loading TextLoading="Click for loading more items..." /></span>
                     </li>
                 }
             </ul>
