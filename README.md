@@ -36,5 +36,16 @@ AspNetCore.Blazor.Httpclient package: For obtaining the response in the json for
 I really enjoyed doing this!
 
 ## Screenshots of working in application
-![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/sc01.jpg?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc01.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc02.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc03.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc04.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc05.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc06.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc07.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc08.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc09.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc10.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc11.JPG?raw=true)
+![alt text](https://github.com/eriverotupac/Ravn-Blazor-Challenge-EdithRivero/blob/master/RavnChallenge/wwwroot/screenshots/sc12.JPG?raw=true)
 
