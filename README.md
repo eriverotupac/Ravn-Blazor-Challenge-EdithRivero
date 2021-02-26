@@ -30,9 +30,9 @@ AspNetCore.Blazor.Httpclient package: For obtaining the response in the json for
 ## Some difficulties:
 - I did not finish to design the error page.
 - To be honest, the frontend code is a bit challenge that backend. So, I was stucked in making the list of people.
-- The other thing that made me search a lot on the internet, was how to handle the pagination. I first tried *Virtualization*, but it did not work as was wantted. Then, I tried  *ItemsProviderResult* and I realized that it took so much time. So, I decided to add a button to get the data. I know it is not the functionaly expected, but I prefer to let it working.
+- The other thing that made me search a lot on the internet, was how to handle the pagination. I first tried *Virtualization*, but it did not work as was wantted. Then, I tried  *ItemsProviderResult* and I realized that it took so much time. So, I decided to add a button to get the data. I know this is not the functionaly expected, but I prefer to let it working.
 
-## Happinnes
+## Happiness
 I really enjoyed doing this!
 
 ## Screenshots of working in application
