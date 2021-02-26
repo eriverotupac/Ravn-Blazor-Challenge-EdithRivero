@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChallengeRavn.Helpers
-{
+{ 
+    //This class is a helper that allows to get desired data from URL.
     public class ParseUrlHelper
     {
         public ParseUrlHelper()

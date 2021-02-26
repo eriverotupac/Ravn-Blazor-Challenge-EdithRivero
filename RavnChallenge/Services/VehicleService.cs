@@ -10,6 +10,7 @@ using ChallengeRavn.Helpers;
 
 namespace ChallengeRavn.Services
 {
+    //This class allows to get the data of vehicles
     public class VehicleService
     {
         private HttpClient _HttpClient;
@@ -20,6 +21,11 @@ namespace ChallengeRavn.Services
             _ParseHelper = new ParseUrlHelper();
         }
 
+        /* Method name: GetVehicleDetails
+        * Parameters: peopleDetails {type: People}
+        * Description: This method receives an object people. Then, if the object people has vehicles, 
+        * the method request all of them.
+        */
         public async Task<string[]> GetVehicleDetails(People peopleDetails)
         {
             try
